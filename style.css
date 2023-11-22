@@ -214,7 +214,7 @@ input {
   display: flex;
   flex-direction: column;
   margin-bottom: 10rem;
-  display: none;
+  /* display: none; */
 }
 
 .cities h2 {
@@ -236,10 +236,10 @@ input {
 
 .cards-container {
   display: flex;
-  /* overflow-x: scroll; */
-  flex-wrap: wrap;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
   padding: 0 1rem;
-  justify-content: center;
+  justify-content: start;
 }
 
 .image-card {
@@ -360,6 +360,11 @@ input {
     max-width: 450px;
     bottom: -50px;
   }
+
+  .cards-container {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (min-width: 1264px) {
@@ -394,5 +399,18 @@ input {
   }
   .background {
     min-height: 404px;
+  }
+
+  .cities h2 {
+    font-size: 10rem;
+    top: -130px;
+    left: 10px;
+  }
+  .cities span {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .cards-container span {
+    bottom: -5px;
   }
 }
